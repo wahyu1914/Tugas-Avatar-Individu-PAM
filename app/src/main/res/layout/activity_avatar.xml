@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/flAvatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        android:layout_marginBottom="8dp">
+
+        <!-- Base face -->
+        <ImageView
+            android:id="@+id/ivBase"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/face_base"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivHair"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/hair"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivEyes"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/eyes"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ivMouth"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/mouth"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.6"
+        android:orientation="horizontal"/>
+
+    <CheckBox
+        android:id="@+id/cbHair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hair"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/cbEyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eyes"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@id/cbHair"
+        android:layout_marginStart="16dp"/>
+
+    <CheckBox
+        android:id="@+id/cbMouth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mouth"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@id/cbEyes"
+        android:layout_marginStart="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
